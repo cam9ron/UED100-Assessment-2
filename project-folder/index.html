@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JB Hi-Fi Australia</title>
+    <!--Link to CSS file for styling-->
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <!-- Header Section with website title and navigation links -->
+    <header>
+        <h1>JB Hi-Fi Australia</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Banner section displaying a welcome message and banner image -->
+        <section id="home">
+            <h2>Welcome to JB Hi-Fi</h2>
+            <p>Discover the latest in electronics and home entertainment</p>
+            <img src="images/banner.jpg" alt="Banner Image">
+        </section>
+
+        <!-- Products section with search bar  -->
+        <section id="products">
+            <h2>Latest Products</h2>
+
+            <!-- Search bar to filter products based on user input -->
+            <!-- this function filters the products displayed on the page based on user input as the user types in the search bar, this function hides products that dont match the search -->
+            <!-- the fuction leverages JS foreach loop to iterate over all product elements and checks if the query, coverted to lower case, is found with in each product name or discription. the use of includes ensures partial matches are displayed-->
+            <!--this approach creates a seamless, real-time search experience without reloading the page.-->
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search products..." onkeyup="searchProducts()">
+            </div>
+
+            <!-- Product gallery displaying products -->
+            <div class="product-gallery">
+                <!-- Product 1: iPhone 15 Plus -->
+                <div class="product">
+                    <img src="images/product1.jpg" alt="iPhone 15 Plus">
+                    <h3>iPhone 15 Plus</h3>
+                    <p>iPhone 15 Plus brings you Dynamic Island, a 48MP Main camera and USB-C — all in a durable colour-infused glass and aluminium design.</p>
+                    <div class="price-box">
+                        <span class="original-price">$1099.00</span>
+                        <span class="discount-price">$999.00</span>
+                    </div>
+                </div>
+
+                <!-- Product 2: Google Pixel 9 Pro (Coming Soon) -->
+                <div class="product coming-soon">
+                    <img src="images/product2.jpg" alt="Google Pixel 9 Pro">
+                    <h4>Google Pixel 9 Pro</h4>
+                    <p>Meet the Pixel 9 Pro. It has a sleek, stunning design and it's the most powerful Pixel yet. Take pro-level photos and videos with the triple camera system and make expert edits.</p>
+                    <div class="price-box">
+                        <span class="original-price">$999.00</span>
+                        <span class="discount-price">$899.00</span>
+                    </div>
+                    <span class="coming-soon-label">Coming Soon</span>
+                </div>
+
+                <!-- Product 3: Samsung Galaxy S23 Ultra -->
+                <div class="product">
+                    <img src="images/product3.jpg" alt="Samsung Galaxy S23 Ultra">
+                    <h3>Samsung Galaxy S23 Ultra</h3>
+                    <p>The Samsung Galaxy S23 Ultra redefines photography with its 200MP camera and 10x optical zoom. Enjoy the stunning AMOLED display and top-notch performance with the Snapdragon 8 Gen 2 processor.</p>
+                    <div class="price-box">
+                        <span class="discount-price">$1199.00</span>
+                    </div>
+                </div>
+
+                <!-- Product 4: Sony WH-1000XM5 Headphones (Coming Soon) -->
+                <div class="product coming-soon">
+                    <img src="images/product4.jpg" alt="Sony WH-1000XM5 Headphones">
+                    <h3>Sony WH-1000XM5</h3>
+                    <p>Experience industry-leading noise cancellation with Sony WH-1000XM5 headphones. Enjoy up to 30 hours of battery life, superior sound quality, and comfortable, lightweight design.</p>
+                    <div class="price-box">
+                        <span class="original-price">$449.00</span>
+                        <span class="discount-price">$399.00</span>
+                    </div>
+                    <span class="coming-soon-label">Coming Soon</span>
+                </div>
+
+                <!-- Product 5: MacBook Pro 16" M2 -->
+                <div class="product">
+                    <img src="images/product5.jpg" alt="MacBook Pro 16 M2">
+                    <h3>MacBook Pro 16" M2</h3>
+                    <p>The MacBook Pro with M2 chip offers unprecedented performance, a stunning Retina display, and up to 21 hours of battery life, perfect for professionals and creatives.</p>
+                    <div class="price-box">
+                        <span class="original-price">$2599.00</span>
+                        <span class="discount-price">$2399.00</span>
+                    </div>
+                </div>
+
+                <!-- Product 6: Bose SoundLink Revolve II Bluetooth Speaker -->
+                <div class="product">
+                    <img src="images/product6.jpg" alt="Bose SoundLink Revolve II">
+                    <h3>Bose SoundLink Revolve II</h3>
+                    <p>Enjoy 360-degree sound with the Bose SoundLink Revolve II Bluetooth speaker. It's portable, water-resistant, and provides up to 13 hours of playtime on a single charge.</p>
+                    <div class="price-box">
+                        <span class="discount-price">$199.00</span>
+                    </div>
+                </div>
+                <!-- Here is where youd add more products -->
+            </div>
+        </section>
+
+        <!-- Contact Us form section for users to message JB Hi Fi-->
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+<!-- Footer with copyright information-->
+    <footer>
+        <p>&copy; 2024 JB Hi-Fi Prototype</p>
+    </footer>
+<!-- Link to JS file for interactivity-->
+    <script src="scripts/main.js"></script>
+</body>
+</html>
